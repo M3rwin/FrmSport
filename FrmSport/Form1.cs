@@ -32,6 +32,14 @@ namespace FrmSport
             {
                 BtnAjout.Enabled = false;
             }
+            if (GrpSports.Controls.Count >= 5)
+            {
+                TxtSport.Enabled = false;
+            }
+            else
+            {
+                TxtSport.Enabled = true;
+            }
         }
 
         private void BtnAjout_Click(object sender, EventArgs e)
@@ -66,6 +74,17 @@ namespace FrmSport
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.BtnToutSelectionner.Checked == true)
+            {
+                foreach(CheckBox checkbox in this.GrpSports.Controls)
+                {
+                    checkbox.Checked = true;
+                }
+            }
         }
     }
 }

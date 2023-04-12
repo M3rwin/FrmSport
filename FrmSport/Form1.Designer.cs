@@ -34,12 +34,15 @@ namespace FrmSport
             this.BtnAjout = new System.Windows.Forms.Button();
             this.TxtSport = new System.Windows.Forms.TextBox();
             this.BtnQuitter = new System.Windows.Forms.Button();
+            this.BtnToutSelectionner = new System.Windows.Forms.CheckBox();
+            this.GrpSports.SuspendLayout();
             this.GrpSaisieSport.SuspendLayout();
             this.SuspendLayout();
             // 
             // GrpSports
             // 
             this.GrpSports.AutoSize = true;
+            this.GrpSports.Controls.Add(this.BtnToutSelectionner);
             this.GrpSports.Location = new System.Drawing.Point(235, 12);
             this.GrpSports.Name = "GrpSports";
             this.GrpSports.Size = new System.Drawing.Size(221, 79);
@@ -88,6 +91,17 @@ namespace FrmSport
             this.BtnQuitter.UseVisualStyleBackColor = true;
             this.BtnQuitter.Click += new System.EventHandler(this.BtnQuitter_Click);
             // 
+            // BtnToutSelectionner
+            // 
+            this.BtnToutSelectionner.AutoSize = true;
+            this.BtnToutSelectionner.Location = new System.Drawing.Point(6, 21);
+            this.BtnToutSelectionner.Name = "BtnToutSelectionner";
+            this.BtnToutSelectionner.Size = new System.Drawing.Size(116, 19);
+            this.BtnToutSelectionner.TabIndex = 0;
+            this.BtnToutSelectionner.Text = "Tout selectionner";
+            this.BtnToutSelectionner.UseVisualStyleBackColor = true;
+            this.BtnToutSelectionner.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -98,6 +112,8 @@ namespace FrmSport
             this.Controls.Add(this.GrpSports);
             this.Name = "Form1";
             this.Text = "Exercice 2";
+            this.GrpSports.ResumeLayout(false);
+            this.GrpSports.PerformLayout();
             this.GrpSaisieSport.ResumeLayout(false);
             this.GrpSaisieSport.PerformLayout();
             this.ResumeLayout(false);
@@ -112,6 +128,7 @@ namespace FrmSport
         private System.Windows.Forms.Button BtnAjout;
         private System.Windows.Forms.TextBox TxtSport;
         private System.Windows.Forms.Button BtnQuitter;
+        private System.Windows.Forms.CheckBox BtnToutSelectionner;
     }
 }
 
